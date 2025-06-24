@@ -17,8 +17,8 @@ const { t } = useI18n();
 
 <i18n>
 {
-  "en": {
-    "noRecordsFound": "No records found",
+  "uk": {
+    "noRecordsFound": "Записів не знайдено"
   }
 }
 </i18n>

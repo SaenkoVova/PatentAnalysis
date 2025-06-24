@@ -108,15 +108,39 @@ const createInventors = (val: string, done: (val: any) => void) => {
 
 const profitsColumns: ITableColumn[] = [
   {
-    name: 'botType',
-    label: 'botType',
-    field: 'botType',
+    name: '#',
+    label: '#',
+    field: '',
     align: 'left',
   },
   {
-    name: 'monthProfit',
-    label: 'monthProfit',
-    field: 'monthProfit',
+    name: 'title',
+    label: 'title',
+    field: 'title',
+    align: 'left',
+  },
+  {
+    name: 'assignee',
+    label: 'assignee',
+    field: 'assignee',
+    align: 'left',
+  },
+  {
+    name: 'inventor',
+    label: 'inventor',
+    field: 'inventor',
+    align: 'left',
+  },
+  {
+    name: 'filingDate',
+    label: 'filingDate',
+    field: 'filingDate',
+    align: 'left',
+  },
+  {
+    name: 'publicationDate',
+    label: 'publicationDate',
+    field: 'publicationDate',
     align: 'left',
   },
 ];
@@ -298,15 +322,11 @@ const { data: profits, isFetching: profitsFetching } = useQuery({
       :loading="profitsFetching"
       :columns="profitsColumns"
       :rows="profits || []"
-      :row-key="(row) => row.botType"
     >
       <template #header="props">
         <q-tr :props="props">
           <q-th v-for="col in props.cols" :key="col.name" :props="props" class="text-bold">
             {{ t(col.label) }}
-          </q-th>
-          <q-th auto-width>
-            <q-btn class="text-bold" outline no-caps icon="add" color="primary" />
           </q-th>
         </q-tr>
       </template>
@@ -358,7 +378,12 @@ const { data: profits, isFetching: profitsFetching } = useQuery({
     "inventors": "Винахідники",
     "dateFrom": "Дата з",
     "dateTo": "Дата до",
-    "search": "Пошук"
+    "search": "Пошук",
+    "title": "Заголовок",
+    "assignee": "Правонаступник",
+    "inventor": "Винахідник",
+    "filingDate": "Дата подання",
+    "publicationDate": "Дата публікації"
   }
 }
 </i18n>
