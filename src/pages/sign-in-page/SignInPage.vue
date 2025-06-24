@@ -111,11 +111,11 @@ const onLoginClick = async () => {
 
 <i18n>
 {
-  "en": {
-    "email": "Email",
-    "password": "Password",
-    "logIn": "Log in",
-    "welcomeBack": "Welcome Back! Please enter your registered Email ID"
+  "uk": {
+    "email": "Емейл",
+    "password": "Пароль",
+    "logIn": "Увійти",
+    "welcomeBack": "Ласкаво Просимо! Будь ласка, вкажіть Ваш зареєстрований Email ID"
   }
 }
 </i18n>
