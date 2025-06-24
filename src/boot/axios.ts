@@ -35,12 +35,14 @@ export default boot(({ app, router }) => {
         if (router.currentRoute.value.name !== RouteNamesEnum.MAINTENANCE) {
           await router.push(maintenanceLink());
         }
+        // eslint-disable-next-line @typescript-eslint/prefer-promise-reject-errors
         return Promise.reject(axiosError);
       }
 
       const originalRequest = axiosError.config;
 
       if (!originalRequest) {
+        // eslint-disable-next-line @typescript-eslint/prefer-promise-reject-errors
         return Promise.reject(axiosError);
       }
 
@@ -52,6 +54,7 @@ export default boot(({ app, router }) => {
 
           const deviceId = localStorage.getItem(LocalStorageKeysEnum.DEVICE_ID);
 
+          // eslint-disable-next-line @typescript-eslint/prefer-promise-reject-errors
           if (!token || !deviceId) return Promise.reject(axiosError);
 
           refreshTokenPromise = refreshToken({
@@ -68,9 +71,11 @@ export default boot(({ app, router }) => {
         } catch {
           const authStore = useAuthStore();
           await authStore.logOut();
+          // eslint-disable-next-line @typescript-eslint/prefer-promise-reject-errors
           return Promise.reject(axiosError);
         }
       } else {
+        // eslint-disable-next-line @typescript-eslint/prefer-promise-reject-errors
         return Promise.reject(axiosError);
       }
     },

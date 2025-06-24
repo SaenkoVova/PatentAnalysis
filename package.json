@@ -1,20 +1,22 @@
 {
   "name": "patent-analysis",
   "version": "0.0.1",
-  "description": "A Quasar Project",
-  "productName": "Quasar App",
+  "description": "Patent Analysis",
+  "productName": "Patent Analysis",
   "author": "SaenkoVova <vova080520@gmail.com>",
+  "type": "module",
   "private": true,
   "scripts": {
-    "lint": "eslint --ext .js,.ts,.vue ./",
+    "lint": "eslint -c ./eslint.config.js \"./src*/**/*.{ts,js,cjs,mjs,vue}\"",
     "format": "prettier --write \"**/*.{js,ts,vue,scss,html,md,json}\" --ignore-path .gitignore",
     "test": "echo \"No test specified\" && exit 0",
     "dev": "quasar dev",
-    "build": "quasar build"
+    "build": "quasar build",
+    "postinstall": "quasar prepare"
   },
   "dependencies": {
     "@quasar/extras": "^1.17.0",
-    "@tanstack/vue-query": "^5.81.2",
+    "@tanstack/vue-query": "^5.80.7",
     "axios": "^1.10.0",
     "decimal.js": "^10.5.0",
     "dotenv": "^16.5.0",
@@ -22,25 +24,28 @@
     "pinia": "^3.0.3",
     "quasar": "^2.18.1",
     "uuid": "^11.1.0",
-    "vue": "^3.5.17",
-    "vue-i18n": "^11.1.7",
+    "vue": "^3.5.16",
+    "vue-i18n": "^11.1.5",
     "vue-router": "^4.5.1"
   },
   "devDependencies": {
-    "@intlify/vite-plugin-vue-i18n": "^7.0.0",
+    "@eslint/js": "^9.29.0",
+    "@intlify/unplugin-vue-i18n": "^6.0.8",
     "@quasar/app-vite": "^2.2.1",
-    "@types/node": "^24.0.3",
-    "@typescript-eslint/eslint-plugin": "^8.35.0",
-    "@typescript-eslint/parser": "^8.35.0",
+    "@types/node": "^24.0.1",
+    "@vue/eslint-config-prettier": "^10.2.0",
+    "@vue/eslint-config-typescript": "^14.5.0",
     "autoprefixer": "^10.4.21",
     "eslint": "^9.29.0",
-    "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-vue": "^10.2.0",
-    "prettier": "^3.6.0",
-    "typescript": "^5.8.3"
+    "globals": "^16.2.0",
+    "prettier": "^3.5.3",
+    "typescript": "~5.8.3",
+    "vite-plugin-checker": "^0.9.3",
+    "vue-tsc": "^2.2.10"
   },
   "engines": {
-    "node": "^18 || ^16 || ^14.19",
+    "node": "^28 || ^26 || ^24 || ^22 || ^20 || ^18",
     "npm": ">= 6.13.4",
     "yarn": ">= 1.21.1"
   }

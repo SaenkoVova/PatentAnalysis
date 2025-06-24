@@ -6,8 +6,8 @@ import { useQuasar } from 'quasar';
 import { useAuthStore } from 'stores/auth';
 import { ref } from 'vue';
 import { LocalStorageKeysEnum } from 'src/enums/common/LocalStorageKeysEnum';
-import { useQuery } from '@tanstack/vue-query';
-import { getUserAvatar, getUserInfo } from 'src/api/user-profile/UserInfoApi';
+// import { useQuery } from '@tanstack/vue-query';
+// import { getUserAvatar, getUserInfo } from 'src/api/user-profile/UserInfoApi';
 import DefaultUserSvg from 'assets/svg/default-user.svg';
 import Logo from 'assets/svg/logo.svg';
 
@@ -18,21 +18,21 @@ const authStore = useAuthStore();
 const isVisible = ref(!$q.screen.xs && !$q.screen.sm);
 const miniState = ref(true);
 
-const { data: userInfo } = useQuery({
-  queryKey: ['get-user-profile'],
-  queryFn: getUserInfo,
-  refetchOnMount: false,
-  refetchOnReconnect: false,
-  refetchOnWindowFocus: false,
-});
+// const { data: userInfo } = useQuery({
+//   queryKey: ['get-user-profile'],
+//   queryFn: getUserInfo,
+//   refetchOnMount: false,
+//   refetchOnReconnect: false,
+//   refetchOnWindowFocus: false,
+// });
 
-const { data: userAvatar } = useQuery({
-  queryKey: ['get-user-profile-avatar'],
-  queryFn: getUserAvatar,
-  refetchOnMount: false,
-  refetchOnReconnect: false,
-  refetchOnWindowFocus: false,
-});
+// const { data: userAvatar } = useQuery({
+//   queryKey: ['get-user-profile-avatar'],
+//   queryFn: getUserAvatar,
+//   refetchOnMount: false,
+//   refetchOnReconnect: false,
+//   refetchOnWindowFocus: false,
+// });
 
 const onThemeToggleClick = ($event: boolean) => {
   $q.dark.set($event);

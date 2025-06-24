@@ -1,6 +1,6 @@
-# Quasar App (patent-analysis)
+# Patent Analysis
 
-A Quasar Project
+Patent Analysis
 
 ## Install the dependencies
 ```bash
@@ -29,7 +29,6 @@ yarn format
 # or
 npm run format
 ```
-
 
 
 ### Build the app for production
