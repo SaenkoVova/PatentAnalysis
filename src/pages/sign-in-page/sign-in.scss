@@ -1,0 +1,26 @@
+.page {
+  &__container {
+    height: 100vh;
+  }
+
+  &__banner {
+    background-image: url("src/assets/background.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &__form {
+    flex: 1;
+  }
+
+  &__title {
+    font-size: 25px;
+    margin-bottom: 15px;
+  }
+
+  &__subtitle {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+}

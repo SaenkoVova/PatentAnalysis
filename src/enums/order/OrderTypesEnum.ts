@@ -1,0 +1,9 @@
+export enum OrderTypesEnum {
+  LIMIT = 'LIMIT',
+  MARKET = 'MARKET',
+  OCO = 'OCO',
+  LIMIT_MAKER = 'LIMIT_MAKER',
+  STOP_LOSS_LIMIT = 'STOP_LOSS_LIMIT',
+  STOP_LIMIT = 'STOP_LIMIT',
+  STOP_MARKET = 'STOP_MARKET',
+}

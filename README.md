@@ -1,6 +1,6 @@
-# Patent Analysis App (patent-analysis)
+# Quasar App (patent-analysis)
 
-Patent analysis app
+A Quasar Project
 
 ## Install the dependencies
 ```bash

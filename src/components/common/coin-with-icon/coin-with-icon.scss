@@ -1,0 +1,11 @@
+.icon-with-label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  &__image {
+    width: 26px;
+    height: 26px;
+    margin-right: 5px;
+  }
+}

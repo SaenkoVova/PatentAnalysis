@@ -11,6 +11,7 @@
 
 const { configure } = require('quasar/wrappers');
 const path = require('path');
+require('dotenv/config');
 
 module.exports = configure(function (/* ctx */) {
   return {
@@ -32,6 +33,7 @@ module.exports = configure(function (/* ctx */) {
     boot: [
       'i18n',
       'axios',
+      'vueQuery',
     ],
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#css
@@ -60,7 +62,16 @@ module.exports = configure(function (/* ctx */) {
         node: 'node16'
       },
 
-      vueRouterMode: 'hash', // available values: 'hash', 'history'
+      env: {
+        API_URL: process.env.API_URL,
+        ETH_EXPLORER_LINK: process.env.ETH_EXPLORER_LINK,
+        BSC_EXPLORER_LINK: process.env.BSC_EXPLORER_LINK,
+        BTC_EXPLORER_LINK: process.env.BTC_EXPLORER_LINK,
+        TRON_EXPLORER_LINK: process.env.TRON_EXPLORER_LINK,
+        POLYGON_EXPLORER_LINK: process.env.POLYGON_EXPLORER_LINK,
+      },
+
+      vueRouterMode: 'history', // available values: 'hash', 'history'
       // vueRouterBase,
       // vueDevtools,
       // vueOptionsAPI: false,
